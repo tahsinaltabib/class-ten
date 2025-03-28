@@ -1,0 +1,38 @@
+
+ul{
+  display: flex;
+  list-style: none;
+  column-gap: 40px;
+  justify-content: center;
+}
+ul li{
+  color: #000000; 
+  font-size: 20px;
+  position: relative;
+}
+ul li::after{
+  position: absolute;
+  content: "";
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: red;
+  transition: .4s;
+}
+ul li:hover::after{
+  width: 80%;
+}
+ul li::before{
+  position: absolute;
+  content: "";
+  top: -2px;
+  right: 0;
+  width: 0%;
+  height: 3px;
+  background: red;
+  transition: .4s;
+}
+ul li:hover::before{
+  width: 80%;
+}
